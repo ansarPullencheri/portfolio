@@ -205,15 +205,19 @@
         }
         .portfolio{
             background: var(--snd-bg-color);
+            
         }
         .portfolio h2{
             margin-bottom: 4rem;
         }
+
         .portfolio-container{
             display: grid;
             grid-template-columns: repeat(3, 2fr);
             align-items: center;
             gap: 2.5rem;
+            
+           
         }
         .portfolio-container .portfolio-box{
             position: relative;
@@ -223,13 +227,14 @@
             display: flex;
             width: 273px;
             height: 150px;
+           
             
         }
         .portfolio-box img{
             width: 300px;
             height: 150px;
         
-            /* -------------------------------------------------------------------- */
+            
             
             transition: .5s ease;
             opacity: 0.7;
@@ -276,6 +281,31 @@
             font-size: 2rem;
             color: var(--snd-bg-color);
         }
+
+        /* Mobile screen adjustments */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Single column layout for mobile screens */
+        gap: 1.5rem; /* Adjust the gap for better spacing */
+        justify-content: center; /* Center the grid items horizontally */
+    }
+
+    .portfolio-box {
+        width: 90%; /* Adjust the width to fit the screen */
+        max-width: 300px; /* Set a max width to avoid stretching */
+        margin: 0 auto; /* Center each box horizontally */
+    }
+
+    .portfolio-box img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .portfolio-layer {
+        padding: 0 2rem; /* Adjust padding for smaller screens */
+    }
+}
+
         .Contact h2{
             margin-bottom: 3rem ;
         }

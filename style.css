@@ -89,7 +89,7 @@
         .home-img img{
             width: 25vw;
             animation: flaotImage 4s ease-in-out infinite;
-            border-radius: 3px;
+            border-radius: 50%;
         }
         @keyframes floatImage {
             0%{
@@ -297,8 +297,11 @@
     }
 
     .portfolio-box img {
-        width: 100%; /* Make images responsive */
-        height: auto; /* Maintain aspect ratio */
+         width: 300px; 
+        height: 150px;
+        /* width: 300px;
+            height: 150px; */
+        
     }
 
     .portfolio-layer {

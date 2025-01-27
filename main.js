@@ -127,4 +127,29 @@ window.onscroll = () => {
 //     loop: true,
 // });
 
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form from reloading the page
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("process_form.php", {
+        method: "POST",
+        body: formData,
+    })
+        .then((response) => response.text())
+        .then((data) => {
+            // Show a success message
+            document.getElementById("responseMessage").innerText = "Your message has been sent successfully!";
+            // Optionally clear the form
+            form.reset();
+        })
+        .catch((error) => {
+            // Show an error message
+            document.getElementById("responseMessage").innerText = "There was an error sending your message.";
+            console.error("Error:", error);
+        });
+});
+
+
 
